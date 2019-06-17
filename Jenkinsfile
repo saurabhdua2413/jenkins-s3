@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage('s3') {
-      steps {
+      steps 
         {
           withCredetntials('925d859d-fb27-4a15-a104-bbf143fd4788')
           {
@@ -11,6 +11,5 @@ pipeline {
         }
         
       }
-    }
   }
 }
