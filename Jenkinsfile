@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('s3') {
       steps {
-        s3Upload(bucket: 'uat-artifacts', file: 'createuser.sql', workingDir: '/home/saurabh')    
+        withAWS(region:'ap-south-1'){
+          s3Upload(bucket: 'uat-artifacts', file: 'createuser.sql', workingDir: '/home/saurabh')
+        }            
       }    
     }
   }            
